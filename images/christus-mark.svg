@@ -1,0 +1,44 @@
+<svg viewBox="0 0 300 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="christusMarkTitle">
+  <title id="christusMarkTitle">Illustrated Christus figure, arms open, in a reverent classical pose</title>
+  <defs>
+    <linearGradient id="cmGold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e7cd85"/>
+      <stop offset="55%" stop-color="#b6903f"/>
+      <stop offset="100%" stop-color="#8f6d2b"/>
+    </linearGradient>
+  </defs>
+
+  <g fill="none" stroke="url(#cmGold)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- base / pedestal -->
+    <path d="M92 486 h116 M100 468 h100 M108 450 h84"/>
+
+    <!-- standing robe silhouette -->
+    <path d="M150 96
+             C 130 96 118 112 118 130
+             C 118 148 126 158 118 172
+             C 96 196 70 208 52 236
+             C 40 256 46 268 60 264
+             C 82 258 100 236 116 214
+             C 112 260 104 320 96 372
+             C 90 404 92 432 100 450
+             L 200 450
+             C 208 432 210 404 204 372
+             C 196 320 188 260 184 214
+             C 200 236 218 258 240 264
+             C 254 268 260 256 248 236
+             C 230 208 204 196 182 172
+             C 174 158 182 148 182 130
+             C 182 112 170 96 150 96 Z"/>
+
+    <!-- inner drape folds -->
+    <path d="M150 132 C 146 190 146 260 150 320 C 152 360 150 400 146 434"/>
+    <path d="M132 150 C 126 210 122 280 128 340"/>
+    <path d="M168 150 C 174 210 178 280 172 340"/>
+    <path d="M120 176 C 104 200 86 220 68 240"/>
+    <path d="M180 176 C 196 200 214 220 232 240"/>
+
+    <!-- head -->
+    <circle cx="150" cy="62" r="30"/>
+    <path d="M128 54 C 136 48 164 48 172 54"/>
+  </g>
+</svg>
