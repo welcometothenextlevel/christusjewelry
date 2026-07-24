@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://www.christusjewelry.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-statue.jpg</image:loc>
+      <image:title>The Christus by Bertel Thorvaldsen, 1838</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-pendants-silver-gold.jpg</image:loc>
+      <image:title>Christus pendants in silver and gold plate</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-necklace-gold-plated-744.jpg</image:loc>
+      <image:title>Christus Necklace, Gold Plated #744</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-necklace-sterling-silver-744.jpg</image:loc>
+      <image:title>Christus Necklace, Sterling Silver #744</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-necklace-stainless-steel-744.jpg</image:loc>
+      <image:title>Christus Necklace, Stainless Steel #744</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-necklace-14k-gold-744.jpg</image:loc>
+      <image:title>Christus Necklace, 14K Gold #744</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-tie-bar-gold-plated-7421.jpg</image:loc>
+      <image:title>Christus Tie Bar, Gold Plated #7421</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-tie-bar-stainless-steel-7422.jpg</image:loc>
+      <image:title>Christus Tie Bar, Stainless Steel #7422</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-necklace-two-tone-74454.jpg</image:loc>
+      <image:title>Christus Necklace, Two-Tone #74454</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-large-medallion-necklace-314.jpg</image:loc>
+      <image:title>Christus Large Medallion Necklace, Plated #314</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.christusjewelry.com/images/christus-medallion-necklace-424.jpg</image:loc>
+      <image:title>Christus Medallion Necklace, Plated #424</image:title>
+    </image:image>
+  </url>
+</urlset>

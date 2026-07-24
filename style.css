@@ -113,6 +113,12 @@ a { color: inherit; text-decoration: none; }
   margin-top: 4px;
 }
 
+.header-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s5);
+}
+
 .header-link {
   font-size: 0.76rem;
   font-weight: 500;
@@ -129,44 +135,54 @@ a { color: inherit; text-decoration: none; }
 
 .hero {
   position: relative;
-  overflow: hidden;
-  padding: clamp(56px, 9vw, 104px) 0 clamp(48px, 7vw, 80px);
+  border-bottom: 1px solid var(--line);
+  padding: clamp(48px, 7vw, 88px) 0 clamp(48px, 7vw, 88px);
 }
 
-.hero-figure {
-  position: absolute;
-  top: -40px;
-  right: -40px;
-  width: clamp(220px, 30vw, 420px);
-  opacity: 0.16;
-  pointer-events: none;
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  align-items: center;
+  gap: clamp(32px, 5vw, 72px);
 }
 
-.hero-inner { position: relative; max-width: 760px; }
+.hero-copy { max-width: 560px; }
 .hero h1 { margin-bottom: var(--s5); }
 .hero-lead {
   font-size: clamp(1.02rem, 1.6vw, 1.16rem);
   color: var(--ink-soft);
-  max-width: 640px;
 }
-
-/* ---------- Intro strip ---------- */
-
-.intro {
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: var(--cream-deep);
-}
-.intro-inner {
-  padding: var(--s7) 0;
-  max-width: 760px;
-}
-.intro p {
+.hero-lead + .hero-lead { margin-top: var(--s4); }
+.hero-lead em {
   font-family: var(--serif);
-  font-size: clamp(1.2rem, 2.2vw, 1.5rem);
-  font-style: italic;
+  font-size: 1.14em;
   color: var(--charcoal);
-  line-height: 1.5;
+}
+
+/* Statue photograph with the silver/gold pair inset over its lower corner */
+.hero-figure {
+  position: relative;
+  margin: 0;
+  isolation: isolate;
+}
+
+.hero-statue {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: 74% center;
+  border: 1px solid var(--line);
+}
+
+.hero-pendants {
+  position: absolute;
+  left: clamp(-16px, -1.6vw, 0px);
+  bottom: clamp(-20px, -2vw, -12px);
+  width: clamp(132px, 26%, 210px);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  padding: var(--s3);
+  box-shadow: 0 18px 40px rgba(22, 19, 16, 0.18);
 }
 
 /* ---------- Collection grid ---------- */
@@ -192,13 +208,18 @@ a { color: inherit; text-decoration: none; }
   background: var(--paper);
   border: 1px solid var(--line);
 }
+/* contain, not cover — every piece is shown whole, tie bars included */
 .piece-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  padding: var(--s4);
   transition: transform .6s cubic-bezier(.2,.7,.3,1);
 }
 .piece-link:hover .piece-media img { transform: scale(1.045); }
+
+/* the client's silver #744 shot is photographed on black — match the card to it */
+.piece-media.is-dark { background: #000; border-color: #000; }
 
 .piece-body {
   display: block;
@@ -268,6 +289,23 @@ a { color: inherit; text-decoration: none; }
 }
 .btn:hover { background: var(--gold-deep); border-color: var(--gold-deep); }
 
+.closing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s4);
+  justify-content: center;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--cream);
+  border-color: rgba(246, 241, 231, 0.4);
+}
+.btn-ghost:hover {
+  background: rgba(246, 241, 231, 0.08);
+  border-color: var(--cream);
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer {
@@ -289,6 +327,13 @@ a { color: inherit; text-decoration: none; }
   color: var(--ink-soft);
   margin-bottom: var(--s4);
 }
+.footer-tel {
+  color: inherit;
+  border-bottom: 1px solid var(--line);
+  transition: color .2s ease, border-color .2s ease;
+}
+.footer-tel:hover { color: var(--gold-deep); border-color: var(--gold-deep); }
+
 .footer-copy {
   font-size: 0.76rem;
   color: var(--ink-soft);
@@ -299,7 +344,9 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 980px) {
   .grid { grid-template-columns: repeat(2, 1fr); }
-  .hero-figure { width: clamp(160px, 34vw, 260px); }
+  .hero-inner { grid-template-columns: 1fr; gap: var(--s7); }
+  .hero-copy { max-width: none; }
+  .hero-statue { aspect-ratio: 16 / 9; }
 }
 
 @media (max-width: 620px) {
@@ -308,8 +355,11 @@ a { color: inherit; text-decoration: none; }
   .shell { padding: 0 var(--s4); }
   .grid { grid-template-columns: 1fr; gap: var(--s7); }
   .brand-name { font-size: 1.14rem; }
-  .header-link { font-size: 0.66rem; letter-spacing: 0.1em; }
-  .hero-figure { opacity: 0.12; width: 140px; top: -20px; right: -20px; }
+  .header-nav { gap: var(--s4); }
+  .header-link { font-size: 0.62rem; letter-spacing: 0.08em; }
+  .closing-actions { flex-direction: column; align-items: stretch; }
+  .hero-statue { aspect-ratio: 3 / 2; }
+  .hero-pendants { width: 118px; left: -8px; bottom: -14px; }
   .collection-head { margin-bottom: var(--s7); }
 }
 
