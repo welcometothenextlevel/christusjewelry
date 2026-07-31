@@ -355,6 +355,24 @@ a { color: inherit; text-decoration: none; }
   opacity: 0.8;
 }
 
+/* Build credit */
+.footer-credit {
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--ink-soft);
+  opacity: 0.75;
+  margin-top: var(--s3);
+}
+.footer-credit a {
+  color: var(--gold-deep);
+  border-bottom: 1px solid transparent;
+  transition: border-color .2s ease, color .2s ease;
+}
+.footer-credit a:hover {
+  border-color: var(--gold-deep);
+  color: var(--charcoal);
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 980px) {
